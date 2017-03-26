@@ -5,14 +5,21 @@
   "version": "1.0.0",
   "scripts": {
     "deps": "dependency-check . && dependency-check . --extra --no-dev",
-    "start": "node .",
+    "start": "node . | pino-colada",
     "test": "standard && npm run deps && nyc node test.js",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov"
   },
-  "dependencies": {},
+  "dependencies": {
+    "envobj": "^1.0.3",
+    "hypercore": "^5.4.4",
+    "patterns": "^1.0.3",
+    "pino": "^4.2.2",
+    "wayfarer": "^6.5.0"
+  },
   "devDependencies": {
     "dependency-check": "^2.8.0",
     "nyc": "^10.1.2",
+    "pino-colada": "^1.2.1",
     "standard": "^9.0.2",
     "tape": "^4.6.3"
   },
